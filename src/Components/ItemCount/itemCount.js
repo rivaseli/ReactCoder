@@ -6,10 +6,11 @@ export default function ItemCount(){
 
     const [itemCount, setItemCount] = useState (0)
 
-    const stock = 10
-    
+    const [Stock, setStock] = useState (10)
+
+       
     const updateItem = () => {
-        if(itemCount < stock){
+        if(itemCount < Stock){
             setItemCount (itemCount + 1)
         }
     }
@@ -25,7 +26,7 @@ export default function ItemCount(){
         <div>  
             <h2> Sorrentinos</h2>
             <h1>{itemCount}</h1>
-            <h3> Productos en STOCK={stock} </h3>
+            <h3> Productos en STOCK={Stock} </h3>
             <Button variant="outlined" color="error"onClick={updateItem}>+</Button>
             <Button variant="outlined" color="error"onClick={removeItem}>-</Button>
         
